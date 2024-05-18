@@ -1,0 +1,94 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.container {
+  overflow-x: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  width: 80%; /* Adjusted to be 80% of the container's width */
+  max-width: 100%; /* Ensure the table does not exceed the container's width */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.204);
+  border-radius: 10px;
+  border-collapse: separate; /* Ensure border-collapse is set to separate */
+  border-spacing: 5px 0; /* Adjust the horizontal spacing to 5px and vertical spacing to 0 */
+  margin: 20px auto; /* Add top margin for spacing */
+}
+
+th {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+
+th:first-of-type {
+  border-top-left-radius: 10px;
+}
+
+th:last-of-type {
+  border-top-right-radius: 10px;
+}
+
+tr:hover {
+  background-color: rgba(232, 232, 232, 0.638);
+}
+
+td {
+  padding: 1rem;
+}
+
+.btn-container {
+  margin: auto;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.btn-container button {
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-container button:disabled {
+  cursor: not-allowed;
+  background-color: rgb(229, 229, 229);
+  color: rgba(0, 0, 0, 0.269);
+}
+/* Define keyframes for the flower or balloon effect */
+@keyframes flowerEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the flower or balloon effect to the button when clicked */
+.btn-container button:active {
+  animation: flowerEffect 0.3s ease-in-out;
+}
